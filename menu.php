@@ -1,7 +1,4 @@
 
-<?php
-            include "./db/inicia_conexion.php"
-?>
 <html>
 
 <head>
@@ -24,7 +21,16 @@
         <a href="./pais/registro_pais.php">Registrar nuevo país</a>
         <br>
         <br>
-        <a href="./pais/buscar_pais.php">Buscar país</a>
+        <a href="./pais/buscar_pais.php">Buscar pais</a>
+        <br>
+        <br>
+        <h3>Interes</h3>
+        <a href="./interes/registro_interes.php">Registrar nuevo interes</a>
+        <br>
+        <br>
+        <a href="./interes/buscar_interes.php">Buscar interes</a>
+        <br>
+        <br>
     </div>
 </body>
 

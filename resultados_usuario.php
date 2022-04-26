@@ -40,10 +40,9 @@
                     {
                         echo "<tr>";
                         echo "<td>{$fila["nombres"]}</td>";
-                        echo "<td>". $fila["apellidos"] ."</td>";
-                        echo "<td>ll@gmail.com</td>";
-                        echo "<td>Guatemala</td>";
-                        
+                        echo "<td>{$fila["apellidos"]}</td>";
+                        echo "<td>{$fila["email"]}";
+                        echo "<td>{$fila["pais"]}</td>";
 
                         if ($fila["sexo"] == "M") {
                             echo "<td>Masculino</td>";
