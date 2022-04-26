@@ -9,7 +9,7 @@
     <br>
     <font size="5"><b>Ingrese sus datos</b></font>
     <br><br>
-    <form name="fdatos" method="POST" action="./pais/action_registrar_pais.php">
+    <form name="fdatos" method="POST" action="./action_registrar_pais.php">
         <table border="0">
             <tr>
                 <td>
@@ -26,7 +26,7 @@
                 </td>
             </tr>
         </table>
-        <input type="submit" value="registrar pais">
+        <input type="submit" value="Registrar pais">
     </form>
 </div>
 </body>
