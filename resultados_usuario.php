@@ -50,7 +50,7 @@
                             echo "<td>Femenino</td>";
                         }
                         echo "<td align='center'><img src='./imagenes/edit_icon.png' width='15'></td>";
-                        echo "<td align='center'><a href='javascript:eliminar(" .$fila["usuario"] . ");'><img src='./imagenes/delete_icon.png' width='15' border='0'></a></td>";
+                        echo "<td align='center'><a href='javascript:deleteItemUtil(" .$fila["usuario"] . ");'><img src='./imagenes/delete_icon.png' width='15' border='0'></a></td>";
                         echo "</tr>";
                     }
                     
@@ -61,19 +61,10 @@
             <input type="button" value="Regresar al menu" onClick="document.location = 'menu.php'; ">
             <input type="button" value="Nueva busqueda" onClick="document.location = 'menu.php'; ">
         <form name="fdelete" action="delete_usuario.php" method="POST">
-            <input type="hidden" name="usuario">
+            <input type="hidden" name="deleteItem">
         </form>
     </div>
 </body>
 </html>
-<script language="javascript">
-    function eliminar(pid) 
-    {
-        document.fdelete.usuario.value = pid;
-        respuesta = confirm("¿Está seguro de borrar el registro?");
-        if (respuesta) 
-        {
-            document.fdelete.submit();
-        }
-    }
- </script>
+<script type="text/javascript" src="../js/deleteItemUtil.js">
+</script>
