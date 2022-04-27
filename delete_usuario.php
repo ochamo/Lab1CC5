@@ -11,9 +11,9 @@
 <body>
 <div align="center">
     <?PHP
-        $sql = "delete from usuario_interes where usuario = " . $_POST["usuario"];
+        $sql = "delete from usuario_interes where usuario = " . $_POST["deleteItem"];
         $status = mysqli_query($conexion, $sql);
-        $sql = "delete from usuario where usuario = " . $_POST["usuario"];
+        $sql = "delete from usuario where usuario = " . $_POST["deleteItem"];
         $status = mysqli_query($conexion, $sql);
 
         if ($status) {
