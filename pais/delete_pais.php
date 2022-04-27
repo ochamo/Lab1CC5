@@ -11,7 +11,7 @@
     <body>
         <div align="center">
             <?php
-            $pais = $_POST["paisId"];
+            $pais = $_POST["deleteItem"];
             $sql = "delete from usuario where pais = {$pais}";
             $status = mysqli_query($conexion, $sql);
             $sql = "delete from pais where pais = {$pais}";

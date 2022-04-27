@@ -29,7 +29,7 @@
                 echo "<tr>";
                 echo "<td>{$fila["nombre"]}</td>";
                 echo "<td>". $fila["gentilicio"] ."</td>";
-                echo "<td align='center'><a href='javascript:eliminar(" .$fila["pais"] . ");'><img src='../imagenes/delete_icon.png' width='15' border='0'></a></td>";
+                echo "<td align='center'><a href='javascript:deleteItemUtil(" .$fila["pais"] . ");'><img src='../imagenes/delete_icon.png' width='15' border='0'></a></td>";
                 echo "</tr>";
             }
 
@@ -38,7 +38,7 @@
     </table>
     <br><br>
     <form name="fdelete" action="./delete_pais.php" method="POST">
-        <input type="hidden" name="paisId">
+        <input type="hidden" name="deleteItem">
     </form>
 
 </div>
@@ -47,12 +47,5 @@
 
 </html>
 
-<script language="javascript">
-    function eliminar(pid) {
-        document.fdelete.paisId.value = pid;
-        respuesta = confirm("¿Está seguro de borrar el registro?");
-        if (respuesta) {
-            document.fdelete.submit();
-        }
-    }
+<script type="text/javascript" src="../js/deleteItemUtil.js">
 </script>
