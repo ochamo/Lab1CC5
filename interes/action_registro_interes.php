@@ -1,5 +1,5 @@
 <?php
-    include './db/inicia_conexion.php';
+    include '../db/inicia_conexion.php';
 ?>
 
 <html>
@@ -11,7 +11,7 @@
 <body>
     <div align="center">
         <?PHP
-            $descripcion = $_POST["descripcion"];
+            $descripcion = $_POST["descripcionInteres"];
             $sql = "insert into interes(descripcion) values('{$descripcion}')";
 
             $status = mysqli_query($conexion, $sql);

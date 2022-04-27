@@ -9,7 +9,7 @@
     <br>
     <font size="5"><b>Ingrese sus datos</b></font>
     <br><br>
-    <form name="fdatos" method="POST" action="./action_registrar_interes.php">
+    <form name="fdatos" method="POST" action="./action_registro_interes.php">
         <table border="0">
             <tr>
                 <td><b>Descripción</b></td>

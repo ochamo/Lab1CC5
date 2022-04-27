@@ -15,7 +15,7 @@
                             <b>Descripción</b>
                         </td>
                         <td>
-                            <input type="text" name="nombreInteres">
+                            <input type="text" name="descripcionInteres">
                         </td>
                     </tr>
                 </table>

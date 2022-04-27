@@ -19,7 +19,7 @@
                     <td><b>Descripcion interes</b></td>
                     <td><b>Eliminar</b></td>
                     <?php
-                    $descripcion = $_POST["descripcion"];
+                    $descripcion = $_POST["descripcionInteres"];
                     $sql = "select i.interes, i.descripcion from interes i where i.descripcion like '%{$descripcion}'";
                     $resultados = mysqli_query($conexion, $sql);
                     while ($fila = mysqli_fetch_array($resultados))
@@ -27,7 +27,7 @@
                         echo "<tr>";
                         echo "<td>{$fila["interes"]}</td>";
                         echo "<td>". $fila["descripcion"] ."</td>";
-                        echo "<td align='center'><a href='javascript:eliminar(" .$fila["interes"] . ");'><img src='../imagenes/delete_icon.png' width='15' border='0'></a></td>";
+                        echo "<td align='center'><a href='javascript:deleteItemUtil(" .$fila["interes"] . ");'><img src='../imagenes/delete_icon.png' width='15' border='0'></a></td>";
                         echo "</tr>";
                     }
 
@@ -35,9 +35,11 @@
                 </tr>
             </table>
             <br><br>
-            <form name="fdelete" action="./delete_pais.php" method="POST">
-                <input type="hidden" name="paisId">
+            <form name="fdelete" action="./action_delete_interes.php" method="POST">
+                <input type="hidden" name="deleteItem">
             </form>
         </div>
     </body>
 </html>
+<script type="text/javascript" src="../js/deleteItemUtil.js">
+</script>
