@@ -49,7 +49,7 @@
                         } else {
                             echo "<td>Femenino</td>";
                         }
-                        echo "<td align='center'><img src='./imagenes/edit_icon.png' width='15'></td>";
+                        echo "<td align='center'><a href='javascript:consultar({$fila["usuario"]})'><img src='./imagenes/edit_icon.png' width='15'></a></td>";
                         echo "<td align='center'><a href='javascript:deleteItemUtil(" .$fila["usuario"] . ");'><img src='./imagenes/delete_icon.png' width='15' border='0'></a></td>";
                         echo "</tr>";
                     }
@@ -63,8 +63,18 @@
         <form name="fdelete" action="delete_usuario.php" method="POST">
             <input type="hidden" name="deleteItem">
         </form>
+        <form name="fconsulta" action="view_usuario.php" method="POST">
+            <input type="hidden" name="queryItem">
+        </form>
     </div>
 </body>
 </html>
 <script type="text/javascript" src="../js/deleteItemUtil.js">
+</script>
+
+<script language="javascript">
+    function consultar(pid) {
+        document.fconsulta.queryItem.value = pid;
+        document.fconsulta.submit();
+    }
 </script>
